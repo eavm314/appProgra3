@@ -24,7 +24,11 @@
 
     <style name="titles">
         <item name="fontFamily">@font/cardo_bold</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">28sp</item>
     </style>
 
+    <style name="subtitles">
+        <item name="fontFamily">@font/cardo</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>
