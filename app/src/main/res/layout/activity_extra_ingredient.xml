@@ -4,6 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".activities.ExtraIngredientActivity">
+
+    <TextView
+        android:id="@+id/extras_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/titles"
+        android:text="Seleccionar Extras"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/pizza_hammer_comp"
+        app:layout_constraintTop_toBottomOf="@+id/extras_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/subtitles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagen">
+
+        <TextView
+            android:id="@+id/ing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            style="@style/subtitles2"
+            android:text="Ingrediente" />
+
+        <TextView
+            android:id="@+id/e1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/subtitles2"
+            android:gravity="center"
+            android:text="Poco" />
+
+        <TextView
+            android:id="@+id/e2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/subtitles2"
+            android:gravity="center"
+            android:text="Normal" />
+
+        <TextView
+            android:id="@+id/e3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/subtitles2"
+            android:gravity="center"
+            android:text="Extra" />
+
+        <TextView
+            android:id="@+id/p"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/subtitles2"
+            android:gravity="center"
+            android:text="Precio" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
