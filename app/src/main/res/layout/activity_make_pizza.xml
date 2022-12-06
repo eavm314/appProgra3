@@ -48,8 +48,9 @@
                 android:layout_height="48dp" />
 
             <TextView
+                android:id="@+id/ingrediente"
                 android:layout_width="100dp"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/cardo"
                 android:text="Queso" />
@@ -93,25 +94,26 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/precio_parcial"
+            android:id="@+id/regular"
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ingredientes1">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="30dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
                 android:text="Precio Regular:"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:id="@+id/precio_r"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
                 android:text="0.00 Bs" />
         </LinearLayout>
 
@@ -265,9 +267,35 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/precio_parcial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/precios_tamanios">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Precio Parcial:"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/precio_p"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0.00 Bs" />
+        </LinearLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
+        android:id="@+id/continue_button"
         style="@style/buttons"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
