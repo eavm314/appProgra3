@@ -1,5 +1,6 @@
 package com.grupoa.sparkyoutofbounds.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -18,6 +19,11 @@ class MakePizzaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMakePizzaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.continueButton.setOnClickListener{
+            val intent = Intent(this,ExtraIngredientActivity::class.java)
+            startActivity(intent)
+        }
 
         setIngredients()
     }
