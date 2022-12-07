@@ -6,14 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World con Develop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn_menu"
         android:layout_width="wrap_content"
@@ -30,6 +23,15 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_margin="20dp"
         android:text="login"/>
+
+    <Button
+        android:id="@+id/btn_newuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="20dp"
+        android:text="newuser"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

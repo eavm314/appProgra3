@@ -5,4 +5,5 @@
     <string name="btn_menu_title">menu</string>
     <string name="title_app">Ambre\n Pizza</string>
     <string name="btn_new_user_message"> <u>Crear usuario</u> </string>
+    <string name="create_user_text_view1">Nombre Completo</string>
 </resources>

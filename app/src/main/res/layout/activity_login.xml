@@ -51,13 +51,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:cardCornerRadius="50dp"
                 android:elevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_user"
+                    android:elevation="5dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#B2BB3E00"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/data_login"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintDimensionRatio="5:2"
                 app:layout_constraintTop_toBottomOf="@id/imagen_login"
                 app:layout_constraintBottom_toTopOf="@+id/btn_login"
                 app:cardCornerRadius="20dp">
@@ -71,6 +81,8 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"                        app:layout_constraintBottom_toBottomOf="@id/line_login"
                         android:hint="Usuario"
+                        android:textSize="20sp"
+                        style="@style/edit_texts"
                         android:elevation="1dp"
                         android:background="@color/white"/>
 
@@ -89,6 +101,8 @@
                         app:layout_constraintTop_toBottomOf="@id/line_login"
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:hint="Contraseña"
+                        android:textSize="20sp"
+                        style="@style/edit_texts"
                         android:elevation="1dp"
                         android:background="@color/white"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -108,7 +122,7 @@
 
 
             <Button
-                android:id="@+id/textbtn_new_user"
+                android:id="@+id/btn_go_to_new_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"

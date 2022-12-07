@@ -1,10 +1,9 @@
 package com.grupoa.sparkyoutofbounds.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.grupoa.sparkyoutofbounds.R
 import com.grupoa.sparkyoutofbounds.databinding.ActivityLoginBinding
-import com.grupoa.sparkyoutofbounds.databinding.ActivityMenuBinding
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
@@ -12,5 +11,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnGoToNewUser.setOnClickListener {
+            val intent = Intent(this, NewUserActivity::class.java)
+            startActivity(intent)
+        }
     }
+
+
 }
