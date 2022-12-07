@@ -17,15 +17,17 @@
         app:cardCornerRadius="40dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/pinky">
 
             <TextView
+                android:id="@+id/title_create_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/container1"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:text="Crear\n Usuario"
@@ -33,16 +35,111 @@
                 android:textStyle="bold"
                 android:textSize="40dp"/>
 
+
+
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title_create_user">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="nombre completo"/>
+
+                <ImageView
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rectangle_container"
+                    app:layout_constraintTop_toBottomOf="@id/text1"/>
+                <EditText
+                    android:layout_margin="10dp"
+                    android:id="@+id/edit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese su nombre"
+                    app:layout_constraintTop_toTopOf="@id/view1"
+                    app:layout_constraintBottom_toBottomOf="@id/view1" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/container1"
+                app:layout_constraintBottom_toTopOf="@id/container3">
 
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="nombre completo"/>
+
+                <ImageView
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rectangle_container"
+                    app:layout_constraintTop_toBottomOf="@id/text2"/>
+                <EditText
+                    android:layout_margin="10dp"
+                    android:id="@+id/edit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese su nombre"
+                    app:layout_constraintTop_toTopOf="@id/view2"
+                    app:layout_constraintBottom_toBottomOf="@id/view2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/container2"
+                app:layout_constraintBottom_toTopOf="@id/btn_create_user">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="nombre completo"/>
+
+                <ImageView
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rectangle_container"
+                    app:layout_constraintTop_toBottomOf="@id/text3"/>
+                <EditText
+                    android:layout_margin="10dp"
+                    android:id="@+id/edit3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese su nombre"
+                    app:layout_constraintTop_toTopOf="@id/view3"
+                    app:layout_constraintBottom_toBottomOf="@id/view3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_create_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/container3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Crear cuenta"
+                android:textSize="20sp"
+                style="@style/buttons"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
