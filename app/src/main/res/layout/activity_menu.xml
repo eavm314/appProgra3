@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:text="@string/message_btn_create_pizza"
-        android:theme="@style/buttons"/>
+        style="@style/buttons"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -17,9 +17,10 @@
     </style>
 
     <style name="buttons">
+        <item name="textAllCaps">false</item>
         <item name="backgroundTint">@color/green</item>
         <item name="android:fontFamily">@font/josefin_sans</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="titles">
