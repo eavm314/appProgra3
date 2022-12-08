@@ -1,15 +1,15 @@
 package com.grupoa.sparkyoutofbounds.adapter
 
 import android.R
+import android.animation.LayoutTransition
 import android.os.Build
-import android.transition.AutoTransition
-import android.transition.Fade
-import android.transition.Transition
+import android.transition.*
+import android.view.Gravity
 
-import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.grupoa.sparkyoutofbounds.databinding.ItemPizzaCardBinding
@@ -34,25 +34,18 @@ class PizzaCardAdapter : RecyclerView.Adapter<PizzaCardAdapter.PizzaCardViewHold
         }
 
         override fun getItemCount(): Int = pizzaCard.size
-
         inner class PizzaCardViewHolder(private var binding: ItemPizzaCardBinding):
             RecyclerView.ViewHolder(binding.root){
+
             fun binding(data: String){
                 binding.textInfo.text = data
-
-                binding.cardPizza.setOnClickListener(){
-                    if (binding.contText.visibility == View.VISIBLE) {
-                        // The transition of the hiddenView is carried out by the TransitionManager class.
-                        // Here we use an object of the AutoTransition Class to create a default transition
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                            TransitionManager.beginDelayedTransition(binding.contText, Fade(Fade.MODE_OUT))
-                        }
-                        binding.contText.visibility = View.GONE
-                    } else {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                            TransitionManager.beginDelayedTransition(binding.contText, Fade(Fade.MODE_IN))
-                        }
+                binding.imgMenu.setOnClickListener(){
+                    if (binding.contText.visibility == View.GONE) {
+                       // TransitionManager.beginDelayedTransition(binding.contText, Slide(Gravity.TOP))
                         binding.contText.visibility = View.VISIBLE
+                    } else {
+                       // TransitionManager.beginDelayedTransition(binding.contText, AutoTransition())
+                        binding.contText.visibility = View.GONE
                     }
                 }
             }

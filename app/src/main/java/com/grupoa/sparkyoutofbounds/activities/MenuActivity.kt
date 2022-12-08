@@ -22,7 +22,7 @@ class MenuActivity : AppCompatActivity() {
     fun setRecyclerView(){
 
         val mutablelist = mutableListOf<String>()
-        mutablelist.add("A")
+        mutablelist.add("pan pan pan pan\nnpanpanpanpan pan pan pan pan\nnpanpanpanpan")
         mutablelist.add("B")
         mutablelist.add("C")
         mutablelist.add("D")
