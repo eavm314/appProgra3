@@ -1,7 +1,10 @@
 package com.grupoa.sparkyoutofbounds.adapter
 
+import android.R
 import android.os.Build
 import android.transition.AutoTransition
+import android.transition.Fade
+import android.transition.Transition
 
 import android.transition.TransitionManager
 import android.view.LayoutInflater
@@ -41,13 +44,13 @@ class PizzaCardAdapter : RecyclerView.Adapter<PizzaCardAdapter.PizzaCardViewHold
                     if (binding.contText.visibility == View.VISIBLE) {
                         // The transition of the hiddenView is carried out by the TransitionManager class.
                         // Here we use an object of the AutoTransition Class to create a default transition
-                        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT) {
-                            TransitionManager.beginDelayedTransition(binding.contText, AutoTransition())
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                            TransitionManager.beginDelayedTransition(binding.contText, Fade(Fade.MODE_OUT))
                         }
                         binding.contText.visibility = View.GONE
                     } else {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                            TransitionManager.beginDelayedTransition(binding.contText, AutoTransition())
+                            TransitionManager.beginDelayedTransition(binding.contText, Fade(Fade.MODE_IN))
                         }
                         binding.contText.visibility = View.VISIBLE
                     }
