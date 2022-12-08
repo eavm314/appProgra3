@@ -4,12 +4,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.grupoa.sparkyoutofbounds.dataClasses.Ingrediente
+import com.grupoa.sparkyoutofbounds.dataClasses.Ingredient
 import com.grupoa.sparkyoutofbounds.databinding.ItemIngredientSelectBinding
 
 class IngredientSelectAdapter :
     RecyclerView.Adapter<IngredientSelectAdapter.IngredientSelectViewHolder>() {
-    private val ingredientSelectList = mutableListOf<Ingrediente>()
+    private val ingredientSelectList = mutableListOf<Ingredient>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IngredientSelectViewHolder =
         IngredientSelectViewHolder(
@@ -40,14 +40,14 @@ class IngredientSelectAdapter :
             }
         }
 
-            fun setData(data: Ingrediente) {
+            fun setData(data: Ingredient) {
                 binding.ingrediente.isChecked = data.isSelected
                 binding.ingrediente.text = data.name
                 binding.precioI.text = "${data.price} Bs"
             }
         }
 
-        fun addIngredientSelects(list: List<Ingrediente>) {
+        fun addIngredientSelects(list: List<Ingredient>) {
             ingredientSelectList.clear()
             ingredientSelectList.addAll(list)
         }
