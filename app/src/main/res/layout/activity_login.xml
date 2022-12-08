@@ -69,7 +69,7 @@
                 android:layout_height="0dp"
                 app:layout_constraintDimensionRatio="5:2"
                 app:layout_constraintTop_toBottomOf="@id/imagen_login"
-                app:layout_constraintBottom_toTopOf="@+id/btn_login"
+                app:layout_constraintBottom_toTopOf="@+id/btn_send_login"
                 app:cardCornerRadius="20dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
