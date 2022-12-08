@@ -16,6 +16,10 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, NewUserActivity::class.java)
             startActivity(intent)
         }
+        binding.btnSendLogin.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 

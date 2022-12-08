@@ -27,7 +27,7 @@ class PizzaCardAdapter : RecyclerView.Adapter<PizzaCardAdapter.PizzaCardViewHold
         inner class PizzaCardViewHolder(private val binding: ItemPizzaCardBinding):
             RecyclerView.ViewHolder(binding.root){
             fun binding(data: String){
-                binding.textPizzaCard.text = data
+                //binding..text = data
             }
         }
 
