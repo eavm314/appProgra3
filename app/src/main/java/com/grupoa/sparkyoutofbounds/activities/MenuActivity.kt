@@ -1,9 +1,9 @@
 package com.grupoa.sparkyoutofbounds.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.grupoa.sparkyoutofbounds.R
 import com.grupoa.sparkyoutofbounds.adapter.PizzaCardAdapter
 import com.grupoa.sparkyoutofbounds.databinding.ActivityMenuBinding
 
@@ -17,6 +17,12 @@ class MenuActivity : AppCompatActivity() {
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setRecyclerView()
+
+        binding.btnCreatePizza.setOnClickListener{
+            val intent = Intent(this, MakePizzaActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     fun setRecyclerView(){

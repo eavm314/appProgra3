@@ -1,4 +1,4 @@
-package com.grupoa.sparkyoutofbounds.adapters
+package com.grupoa.sparkyoutofbounds.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
