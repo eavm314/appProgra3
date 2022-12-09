@@ -69,6 +69,8 @@
                     android:hint="Ingrese su nombre"
                     style="@style/edit_texts"
                     app:layout_constraintTop_toTopOf="@id/view1"
+                    android:maxLines="1"
+
                     app:layout_constraintBottom_toBottomOf="@id/view1" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -102,6 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Ingrese su nuevo usuario"
+                    android:maxLines="1"
                     style="@style/edit_texts"
                     app:layout_constraintTop_toTopOf="@id/view2"
                     app:layout_constraintBottom_toBottomOf="@id/view2" />
@@ -138,9 +141,11 @@
                     android:layout_height="wrap_content"
                     android:hint="Ingrese su nueva contraseña"
                     style="@style/edit_texts"
+                    android:maxLines="1"
+                    android:maxLength="15"
                     app:layout_constraintTop_toTopOf="@id/view3"
                     app:layout_constraintBottom_toBottomOf="@id/view3"
-                    android:inputType="textVisiblePassword"/>
+                    android:inputType="textPassword"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
