@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.grupoa.sparkyoutofbounds.databinding.ActivityMainBinding
+import com.grupoa.sparkyoutofbounds.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,5 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         //esto paso hoy!!
 
+        setContentView(R.layout.activity_main)
+
+        val intent = Intent(this,MakePizzaActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -15,4 +15,5 @@
         <item name="android:colorBackground">@color/pinky</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
 </resources>

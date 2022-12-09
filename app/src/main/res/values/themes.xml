@@ -16,6 +16,19 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+
+
+
+
+
+
+    <style name="subtitles2">
+        <item name="fontFamily">@font/cardo_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:colorBackground">@color/pinky</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <style name="buttons">
         <item name="textAllCaps">false</item>
         <item name="backgroundTint">@color/green</item>

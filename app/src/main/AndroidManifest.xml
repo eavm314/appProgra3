@@ -13,6 +13,22 @@
         android:theme="@style/Theme.SparkyOutOfBounds"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ExtraIngredientActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".activities.MakePizzaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
             android:name=".activities.NewUserActivity"
             android:exported="false">
             <meta-data
@@ -48,6 +64,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
     </application>
 
 </manifest>
