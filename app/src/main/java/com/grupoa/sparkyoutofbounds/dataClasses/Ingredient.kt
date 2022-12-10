@@ -5,4 +5,4 @@ data class Ingredient(
     val price: Double,
     var isSelected: Boolean = false,
     var modifier: Double = 1.0
-)
+): java.io.Serializable

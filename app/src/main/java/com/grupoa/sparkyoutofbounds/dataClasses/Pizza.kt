@@ -8,4 +8,12 @@ data class Pizza(
         Ingredient("Tomate", 5.0)
     ),
     var size: Double = 1.0
-)
+) : java.io.Serializable {
+    fun getRegularPrice() = ingredients.filter { it.isSelected }.sumOf { it.price }
+    fun getPartialPrice() = getRegularPrice() * size
+    fun getTotalPrice() =
+        ingredients.filter { it.isSelected }.sumOf { it.price * it.modifier } * size
+}
+
+
+
