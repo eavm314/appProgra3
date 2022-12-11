@@ -12,6 +12,8 @@ import com.grupoa.sparkyoutofbounds.databinding.ItemIngredientSelectBinding
 class IngredientSelectAdapter :
     RecyclerView.Adapter<IngredientSelectAdapter.IngredientSelectViewHolder>() {
     private lateinit var pizza: Pizza
+    private lateinit var ingredientSelectList: List<Ingredient>
+
     private lateinit var priceR: TextView
     private lateinit var priceP: TextView
 
@@ -25,10 +27,10 @@ class IngredientSelectAdapter :
         )
 
     override fun onBindViewHolder(holder: IngredientSelectViewHolder, position: Int) {
-        holder.setData(pizza.ingredients[position])
+        holder.setData(ingredientSelectList[position])
     }
 
-    override fun getItemCount(): Int = pizza.ingredients.size
+    override fun getItemCount(): Int = ingredientSelectList.size
 
     inner class IngredientSelectViewHolder(private val binding: ItemIngredientSelectBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -36,7 +38,7 @@ class IngredientSelectAdapter :
         init {
             binding.ingrediente.setOnClickListener {
                 val isChecked = binding.ingrediente.isChecked
-                pizza.ingredients[adapterPosition].isSelected = isChecked
+                ingredientSelectList[adapterPosition].isSelected = isChecked
 
                 val price1 = pizza.getRegularPrice()
                 priceR.text = "$price1 Bs"
@@ -44,7 +46,7 @@ class IngredientSelectAdapter :
                 val price2 = pizza.getPartialPrice()
                 priceP.text = "$price2 Bs"
 
-                for (ing in pizza.ingredients) {
+                for (ing in ingredientSelectList) {
                     Log.d("Ingrediente: ", ing.toString())
                 }
             }
@@ -59,7 +61,9 @@ class IngredientSelectAdapter :
 
     fun addIngredientSelects(pizza: Pizza) {
         this.pizza = pizza
+        this.ingredientSelectList = pizza.ingredients
     }
+
     fun recieveTextViews(priceR:TextView, priceP:TextView){
         this.priceR = priceR
         this.priceP = priceP
