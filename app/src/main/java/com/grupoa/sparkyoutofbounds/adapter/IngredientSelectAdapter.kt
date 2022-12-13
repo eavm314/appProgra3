@@ -40,14 +40,18 @@ class IngredientSelectAdapter :
                 val isChecked = binding.ingrediente.isChecked
                 ingredientSelectList[adapterPosition].isSelected = isChecked
 
+                var newText: String
+
                 val price1 = pizza.getRegularPrice()
-                priceR.text = "$price1 Bs"
+                newText = "${String.format("%.2f",price1)} Bs"
+                priceR.text = newText
 
                 val price2 = pizza.getPartialPrice()
-                priceP.text = "$price2 Bs"
+                newText = "${String.format("%.2f",price2)} Bs"
+                priceP.text = newText
 
                 for (ing in ingredientSelectList) {
-                    Log.d("Ingrediente: ", ing.toString())
+                    Log.d("Ingredient: ", ing.toString())
                 }
             }
         }
@@ -55,16 +59,20 @@ class IngredientSelectAdapter :
         fun setData(ingredient: Ingredient) {
             binding.ingrediente.isChecked = ingredient.isSelected
             binding.ingrediente.text = ingredient.name
-            binding.precioI.text = "${ingredient.price} Bs"
+            val newText = "${String.format("%.2f", ingredient.price)} Bs"
+            binding.precioI.text = newText
         }
     }
 
-    fun addIngredientSelects(pizza: Pizza) {
+    fun addIngredientSelects(pizza: Pizza, left: Boolean) {
         this.pizza = pizza
-        this.ingredientSelectList = pizza.ingredients
+        val listSize = pizza.ingredients.size
+        this.ingredientSelectList =
+            if (left) pizza.ingredients.subList(0, (listSize + 1) / 2)
+            else pizza.ingredients.subList((listSize + 1) / 2, listSize)
     }
 
-    fun recieveTextViews(priceR:TextView, priceP:TextView){
+    fun setTextViews(priceR: TextView, priceP: TextView) {
         this.priceR = priceR
         this.priceP = priceP
     }
