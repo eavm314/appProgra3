@@ -6,196 +6,153 @@
     android:layout_height="match_parent"
     tools:context=".activities.ExtraIngredientActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ingredientes_scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/continue_button"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/extras_title"
-            style="@style/titles"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Seleccionar Extras"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imagen"
-            android:layout_width="300dp"
-            android:layout_height="180dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/pizza_hammer_comp"
+            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/extras_title" />
-
-        <LinearLayout
-            android:id="@+id/subtitles"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:weightSum="6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imagen">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                style="@style/subtitles2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.8"
-                android:text="Ingrediente" />
-
-            <TextView
-                style="@style/subtitles2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Poco" />
-
-            <TextView
-                style="@style/subtitles2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Normal" />
-
-            <TextView
-                style="@style/subtitles2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Extra" />
-
-            <TextView
-                style="@style/subtitles2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.2"
-                android:gravity="center"
-                android:text="Precio" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/cantidad_ingrediente"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/subtitles">
-
-            <TextView
-                android:id="@+id/ingrediente"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/cardo"
-                android:text="Ingrediente" />
-
-            <RadioGroup
-                android:id="@+id/radio_buttons"
+                android:id="@+id/extras_title"
+                style="@style/titles"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar Extras"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imagen"
+                android:layout_width="300dp"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/pizza_hammer_comp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tamanios">
+                app:layout_constraintTop_toBottomOf="@+id/extras_title" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/subtitles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imagen">
+
+                <TextView
+                    style="@style/subtitles2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:buttonTint="@color/green"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_weight="1.8"
+                    android:text="Ingrediente" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
+                <TextView
+                    style="@style/subtitles2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:buttonTint="@color/green"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Poco" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
+                <TextView
+                    style="@style/subtitles2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:buttonTint="@color/green"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Normal" />
 
-            </RadioGroup>
+                <TextView
+                    style="@style/subtitles2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Extra" />
 
-            <TextView
-                android:id="@+id/p"
-                android:layout_width="50dp"
+                <TextView
+                    style="@style/subtitles2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:gravity="center"
+                    android:text="Precio" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cantidad_ingredientes"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:gravity="end"
-                android:text="+ 5 Bs"
-                android:textColor="@color/green" />
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtitles"
+                tools:listitem="@layout/item_ingredient_modifier" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/precio_parcial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cantidad_ingrediente">
-
-            <TextView
-                android:layout_width="120dp"
+            <LinearLayout
+                android:id="@+id/precio_parcial"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Precio Parcial:"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cantidad_ingredientes">
 
-            <TextView
-                android:id="@+id/precio_p"
-                android:layout_width="80dp"
-                android:gravity="end"
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Precio Parcial:"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/precio_p"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="0.00 Bs" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/precio_total"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0.00 Bs" />
-        </LinearLayout>
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/precio_parcial">
 
-        <LinearLayout
-            android:id="@+id/precio_total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/precio_parcial">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Precio Total:"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Precio Total:"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/precio_t"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="0.00 Bs" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/precio_t"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:text="0.00 Bs" />
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
     <Button
