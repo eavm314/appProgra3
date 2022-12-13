@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.grupoa.sparkyoutofbounds.activities.MakePizzaActivity.Companion.PIZZA
+import com.grupoa.sparkyoutofbounds.activities.MenuActivity.Companion.PIZZA
 import com.grupoa.sparkyoutofbounds.adapter.IngredientModifierAdapter
 import com.grupoa.sparkyoutofbounds.dataClasses.Pizza
 import com.grupoa.sparkyoutofbounds.databinding.ActivityExtraIngredientBinding

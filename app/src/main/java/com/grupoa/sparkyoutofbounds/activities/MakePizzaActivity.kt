@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.forEach
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.grupoa.sparkyoutofbounds.activities.MenuActivity.Companion.PIZZA
 import com.grupoa.sparkyoutofbounds.adapter.IngredientSelectAdapter
 import com.grupoa.sparkyoutofbounds.dataClasses.Pizza
 import com.grupoa.sparkyoutofbounds.databinding.ActivityMakePizzaBinding
@@ -21,9 +22,6 @@ class MakePizzaActivity : AppCompatActivity() {
     private val ingredientSelectAdapterLeft by lazy { IngredientSelectAdapter() }
     private val ingredientSelectAdapterRight by lazy { IngredientSelectAdapter() }
 
-    companion object {
-        const val PIZZA: String = "enviar_pizza"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
