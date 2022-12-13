@@ -1,11 +1,8 @@
 package com.grupoa.sparkyoutofbounds.activities
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import androidx.core.view.forEach
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.grupoa.sparkyoutofbounds.activities.MakePizzaActivity.Companion.PIZZA
 import com.grupoa.sparkyoutofbounds.adapter.IngredientModifierAdapter
@@ -41,14 +38,16 @@ class ExtraIngredientActivity : AppCompatActivity() {
     }
 
     fun setViews(){
+        val newText: String
         val precioP = pizza.getPartialPrice()
-        binding.precioP.text = "$precioP Bs"
-        binding.precioT.text = "$precioP Bs"
+        newText = "${String.format("%.2f",precioP)} Bs"
+        binding.precioP.text = newText
+        binding.precioT.text = newText
     }
 
     fun setIngredientSelect() {
         ingredientModifierAdapter.addIngredientModifier(pizza)
-        ingredientModifierAdapter.recieveTextView(binding.precioT)
+        ingredientModifierAdapter.setTextView(binding.precioT)
 
         binding.cantidadIngredientes.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)

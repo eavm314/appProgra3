@@ -3,15 +3,12 @@ package com.grupoa.sparkyoutofbounds.adapter
 import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.grupoa.sparkyoutofbounds.R
 import com.grupoa.sparkyoutofbounds.dataClasses.Ingredient
 import com.grupoa.sparkyoutofbounds.dataClasses.Pizza
 import com.grupoa.sparkyoutofbounds.databinding.ItemIngredientModifierBinding
-import com.grupoa.sparkyoutofbounds.databinding.ItemIngredientSelectBinding
 
 class IngredientModifierAdapter :
     RecyclerView.Adapter<IngredientModifierAdapter.IngredientModifierViewHolder>() {
@@ -57,14 +54,18 @@ class IngredientModifierAdapter :
                     }
                 }
 
+                var newText: String
+
                 val priceCurrent = currentIngredient.price*currentIngredient.modifier
-                binding.precio.text = "$priceCurrent Bs"
+                newText = "${(if(priceCurrent>0) '+' else "")}${String.format("%.2f",priceCurrent)} Bs"
+                binding.precio.text = newText
 
                 val priceTotal = pizza.getTotalPrice()
-                priceT.text = "$priceTotal Bs"
+                newText = "${String.format("%.2f",priceTotal)} Bs"
+                priceT.text = newText
 
                 for (ing in ingredientModifierList) {
-                    Log.d("Ingrediente: ", ing.toString())
+                    Log.d("Ingredient: ", ing.toString())
                 }
 
             }
@@ -80,7 +81,7 @@ class IngredientModifierAdapter :
         this.ingredientModifierList = pizza.ingredients.filter { it.isSelected }
     }
 
-    fun recieveTextView(priceT: TextView){
+    fun setTextView(priceT: TextView){
         this.priceT = priceT
     }
 }
