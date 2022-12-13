@@ -18,7 +18,8 @@ class MakePizzaActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMakePizzaBinding
     private lateinit var pizza: Pizza
 
-    private val ingredientSelectAdapter by lazy { IngredientSelectAdapter() }
+    private val ingredientSelectAdapterLeft by lazy { IngredientSelectAdapter() }
+    private val ingredientSelectAdapterRight by lazy { IngredientSelectAdapter() }
 
     companion object {
         const val PIZZA: String = "enviar_pizza"
@@ -36,14 +37,16 @@ class MakePizzaActivity : AppCompatActivity() {
 
     fun setListeners() {
         binding.continueButton.setOnClickListener {
-            if (pizza.ingredients.filter { it.isSelected }.isEmpty()) {
+            if (pizza.ingredients.none { it.isSelected }) {
                 Toast.makeText(this, "Seleccione al menos un ingrediente", Toast.LENGTH_SHORT)
                     .show()
-            } else {
-                val intent = Intent(this, ExtraIngredientActivity::class.java)
-                intent.putExtra(PIZZA, pizza)
-                startActivity(intent)
+                return@setOnClickListener
             }
+
+            val intent = Intent(this, ExtraIngredientActivity::class.java)
+            intent.putExtra(PIZZA, pizza)
+            startActivity(intent)
+
         }
 
         binding.radioButtons.setOnCheckedChangeListener { _, id ->
@@ -68,19 +71,27 @@ class MakePizzaActivity : AppCompatActivity() {
             }
 
             val price = pizza.getPartialPrice()
-            binding.precioP.text = "$price Bs"
+            val newText = "${String.format("%.2f",price)} Bs"
+            binding.precioP.text = newText
             Log.d("pizza", pizza.toString())
         }
 
     }
 
     fun setIngredientSelect() {
-        ingredientSelectAdapter.addIngredientSelects(pizza)
-        ingredientSelectAdapter.recieveTextViews(binding.precioR, binding.precioP)
+        ingredientSelectAdapterLeft.setTextViews(binding.precioR, binding.precioP)
+        ingredientSelectAdapterRight.setTextViews(binding.precioR, binding.precioP)
 
-        binding.ingredientesRV.apply {
+        ingredientSelectAdapterLeft.addIngredientSelects(pizza,true)
+        binding.ingredientesLeft.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            adapter = ingredientSelectAdapter
+            adapter = ingredientSelectAdapterLeft
+        }
+
+        ingredientSelectAdapterRight.addIngredientSelects(pizza,false)
+        binding.ingredientesRight.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = ingredientSelectAdapterRight
         }
     }
 }
