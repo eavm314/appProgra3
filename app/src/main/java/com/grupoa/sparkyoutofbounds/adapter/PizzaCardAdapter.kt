@@ -1,22 +1,17 @@
 package com.grupoa.sparkyoutofbounds.adapter
 
-import android.R
-import android.animation.LayoutTransition
-import android.os.Build
-import android.transition.*
-import android.view.Gravity
-
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
-import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.grupoa.sparkyoutofbounds.dataClasses.PizzaInfo
 import com.grupoa.sparkyoutofbounds.databinding.ItemPizzaCardBinding
 
 class PizzaCardAdapter : RecyclerView.Adapter<PizzaCardAdapter.PizzaCardViewHolder>() {
 
-        private val pizzaCard = mutableListOf<String>()
+        private val pizzaCard = mutableListOf<PizzaInfo>()
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):PizzaCardViewHolder =
             PizzaCardViewHolder(
@@ -29,16 +24,16 @@ class PizzaCardAdapter : RecyclerView.Adapter<PizzaCardAdapter.PizzaCardViewHold
 
         override fun onBindViewHolder(holder: PizzaCardViewHolder, position: Int){
             holder.binding(pizzaCard[position])
-
-
         }
 
         override fun getItemCount(): Int = pizzaCard.size
         inner class PizzaCardViewHolder(private var binding: ItemPizzaCardBinding):
             RecyclerView.ViewHolder(binding.root){
 
-            fun binding(data: String){
-                binding.textInfo.text = data
+            fun binding(data: PizzaInfo){
+                binding.textTitle.text = data.title
+                binding.textInfo.text = data.info
+                binding.imgPizza.setImageResource(data.image)
                 binding.imgMenu.setOnClickListener(){
                     if (binding.contText.visibility == View.GONE) {
                        // TransitionManager.beginDelayedTransition(binding.contText, Slide(Gravity.TOP))
@@ -51,10 +46,12 @@ class PizzaCardAdapter : RecyclerView.Adapter<PizzaCardAdapter.PizzaCardViewHold
             }
         }
 
-        fun addPresentationCards(list: List<String>){
+        fun addPresentationCards(list: List<PizzaInfo>){
             pizzaCard.clear()
             pizzaCard.addAll(list)
 
         }
 
 }
+
+

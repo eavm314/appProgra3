@@ -8,4 +8,5 @@ data class Pizza(
         Ingredient("Tomate", 5.0)
     ),
     var size: Double = 1.0
+
 )

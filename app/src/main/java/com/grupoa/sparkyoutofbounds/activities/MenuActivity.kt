@@ -1,10 +1,16 @@
 package com.grupoa.sparkyoutofbounds.activities
 
 import android.content.Intent
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.grupoa.sparkyoutofbounds.R
 import com.grupoa.sparkyoutofbounds.adapter.PizzaCardAdapter
+import com.grupoa.sparkyoutofbounds.dataClasses.Ingredient
+import com.grupoa.sparkyoutofbounds.dataClasses.Pizza
+import com.grupoa.sparkyoutofbounds.dataClasses.PizzaInfo
 import com.grupoa.sparkyoutofbounds.databinding.ActivityMenuBinding
 
 class MenuActivity : AppCompatActivity() {
@@ -27,15 +33,30 @@ class MenuActivity : AppCompatActivity() {
 
     fun setRecyclerView(){
 
-        val mutablelist = mutableListOf<String>()
-        mutablelist.add("pan pan pan pan\nnpanpanpanpan pan pan pan pan\nnpanpanpanpan")
-        mutablelist.add("B")
-        mutablelist.add("C")
-        mutablelist.add("D")
-        mutablelist.add("E")
-        mutablelist.add("F")
-        mutablelist.add("G")
-        mutablelist.add("H")
+        val mutablelist = mutableListOf<PizzaInfo>()
+      /*  mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_hawaiana,R.string.info_pizza_hawaiana.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_4estaciones,R.string.info_pizza_4estaciones.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_carnivora,R.string.info_pizza_carnivora.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_criolla,R.string.info_pizza_criolla.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_jamon,R.string.info_pizza_jamon.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_new_york,R.string.info_pizza_new_york.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_peperoni,R.string.info_pizza_peperoni.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_queso,R.string.info_pizza_queso.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_ricotta,R.string.info_pizza_ricotta.toString()))
+        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_vegetariana,R.string.info_pizza_vegetariana.toString()))*/
+
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_hawaiana),R.drawable.pizza_hawaiana,getString(R.string.info_pizza_hawaiana)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_4estaciones),R.drawable.pizza_4estaciones,getString(R.string.info_pizza_4estaciones)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_carnivora),R.drawable.pizza_carnivora,getString(R.string.info_pizza_carnivora)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_criolla),R.drawable.pizza_criolla,getString(R.string.info_pizza_criolla)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_jamon),R.drawable.pizza_jamon,getString(R.string.info_pizza_jamon)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_new_york),R.drawable.pizza_new_york,getString(R.string.info_pizza_new_york)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_peperoni),R.drawable.pizza_peperoni,getString(R.string.info_pizza_peperoni)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_queso),R.drawable.pizza_queso,getString(R.string.info_pizza_queso)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_ricotta),R.drawable.pizza_ricotta,getString(R.string.info_pizza_ricotta)))
+        mutablelist.add(PizzaInfo(getString(R.string.title_pizza_vegetariana),R.drawable.pizza_vegetariana,getString(R.string.info_pizza_vegetariana)))
+
+
 
         pizzaCardAdapter.addPresentationCards(mutablelist)
 

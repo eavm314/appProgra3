@@ -9,4 +9,26 @@
     <string name="continuar">Continuar</string>
     <string name="ingredientes">Ingredientes</string>
     <string name="tamanio">Tamaño</string>
+    <string name="title_pizza_hawaiana">----Pizza Hawaiana----</string>
+    <string name="title_pizza_queso">----Pizza Mozzarella----</string>
+    <string name="title_pizza_criolla">----Pizza Criolla----</string>
+    <string name="title_pizza_4estaciones">----Pizza 4 Estaciones----</string>
+    <string name="title_pizza_new_york">----Pizza New York----</string>
+    <string name="title_pizza_ricotta">----Pizza Ricotta----</string>
+    <string name="title_pizza_carnivora">----Pizza Carnivora----</string>
+    <string name="title_pizza_jamon">----Pizza Jamón----</string>
+    <string name="title_pizza_peperoni">----Pizza Peperoni----</string>
+    <string name="title_pizza_vegetariana">----Pizza Vegetariana----</string>
+
+    <string name="info_pizza_hawaiana">Queso mozzarella, jamón, piña y cereza</string>
+    <string name="info_pizza_queso">Queso mozzarella</string>
+    <string name="info_pizza_criolla">Queso mozzarella, carne, chorizo, locoto, aceituna, tomate y cebolla</string>
+    <string name="info_pizza_4estaciones">Queso mozzarella, pepperoni, jamón, champiñones y aceituna</string>
+    <string name="info_pizza_new_york">Queso mozzarella, pepperoni, albóndigas, chorizo, champiñones y cebolla </string>
+    <string name="info_pizza_ricotta">Queso mozzarella y ricotta</string>
+    <string name="info_pizza_carnivora">Queso mozzarella, salame, pepperoni, chorizo y tocino</string>
+    <string name="info_pizza_jamon">Queso mozzarella y jamón</string>
+    <string name="info_pizza_peperoni">Queso mozzarella y chorizo</string>
+    <string name="info_pizza_vegetariana">Queso mozzarella, brócoli, tomate, aceituna, morrón y cebolla</string>
+
 </resources>
