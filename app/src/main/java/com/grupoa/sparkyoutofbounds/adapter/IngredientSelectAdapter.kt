@@ -1,6 +1,5 @@
 package com.grupoa.sparkyoutofbounds.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -38,8 +37,8 @@ class IngredientSelectAdapter :
         fun setData(ingredient: Ingredient) {
             binding.ingrediente.isChecked = ingredient.isSelected
             binding.ingrediente.text = ingredient.name
-            val newText = "${String.format("%.2f", ingredient.price)} Bs"
-            binding.precioI.text = newText
+            val text = "${String.format("%.2f", ingredient.price)} Bs"
+            binding.precioI.text = text
 
             binding.ingrediente.setOnClickListener {
                 val isChecked = binding.ingrediente.isChecked
@@ -55,9 +54,9 @@ class IngredientSelectAdapter :
                 newText = "${String.format("%.2f",price2)} Bs"
                 priceP.text = newText
 
-                for (ing in ingredientSelectList) {
-                    Log.d("Ingredient: ", ing.toString())
-                }
+//                for (ing in ingredientSelectList) {
+//                    Log.d("Ingredient: ", ing.toString())
+//                }
             }
         }
     }
