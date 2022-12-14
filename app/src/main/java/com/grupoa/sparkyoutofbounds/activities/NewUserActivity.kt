@@ -40,7 +40,7 @@ class NewUserActivity : AppCompatActivity() {
                     showMessage("Nuevo Usuario Creado")
                     goLoginActivity()
                 } else{
-                    showMessage("Algo salio mal,")
+                    showMessage("Algo salio mal")
                 }
             }
     }
