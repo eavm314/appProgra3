@@ -38,13 +38,13 @@
 
     <style name="titles">
         <item name="fontFamily">@font/cardo_bold</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="subtitles">
         <item name="fontFamily">@font/cardo_bold</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="background">@color/coffee</item>
     </style>

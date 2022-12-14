@@ -60,7 +60,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:visibility="visible"
+                android:visibility="gone"
                 android:id="@+id/cont_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,6 +75,7 @@
                     android:paddingStart="20dp"
                     android:text=""/>
                 <Button
+                    android:id="@+id/btn_go_to_make_pizza"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/buttons"
