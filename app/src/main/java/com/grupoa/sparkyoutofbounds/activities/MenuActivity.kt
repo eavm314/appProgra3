@@ -45,16 +45,7 @@ class MenuActivity : AppCompatActivity() {
             Pizza(getString(R.string.title_pizza_ricotta),R.drawable.pizza_ricotta,getString(R.string.info_pizza_ricotta), "000000000100001000"),
             Pizza(getString(R.string.title_pizza_vegetariana),R.drawable.pizza_vegetariana,getString(R.string.info_pizza_vegetariana), "101010000101000001")
         )
-      /*  mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_hawaiana,R.string.info_pizza_hawaiana.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_4estaciones,R.string.info_pizza_4estaciones.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_carnivora,R.string.info_pizza_carnivora.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_criolla,R.string.info_pizza_criolla.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_jamon,R.string.info_pizza_jamon.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_new_york,R.string.info_pizza_new_york.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_peperoni,R.string.info_pizza_peperoni.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_queso,R.string.info_pizza_queso.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_ricotta,R.string.info_pizza_ricotta.toString()))
-        mutablelist.add(Pizza(listOf(), 1.0, R.drawable.pizza_vegetariana,R.string.info_pizza_vegetariana.toString()))*/
+
 
 
         pizzaCardAdapter.addPresentationCards(pizzaList)
