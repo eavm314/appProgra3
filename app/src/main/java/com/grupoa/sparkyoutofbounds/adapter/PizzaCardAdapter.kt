@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.grupoa.sparkyoutofbounds.activities.MakePizzaActivity
-import com.grupoa.sparkyoutofbounds.activities.MenuActivity
 import com.grupoa.sparkyoutofbounds.activities.MenuActivity.Companion.PIZZA
 import com.grupoa.sparkyoutofbounds.dataClasses.Pizza
 import com.grupoa.sparkyoutofbounds.databinding.ItemPizzaCardBinding

@@ -17,7 +17,7 @@
     <string name="title_pizza_ricotta">----Pizza Ricotta----</string>
     <string name="title_pizza_carnivora">----Pizza Carnivora----</string>
     <string name="title_pizza_jamon">----Pizza Jamón----</string>
-    <string name="title_pizza_peperoni">----Pizza Peperoni----</string>
+    <string name="title_pizza_peperoni">----Pizza Pepperoni----</string>
     <string name="title_pizza_vegetariana">----Pizza Vegetariana----</string>
 
     <string name="info_pizza_hawaiana">Queso mozzarella, jamón, piña y cereza</string>
@@ -28,7 +28,7 @@
     <string name="info_pizza_ricotta">Queso mozzarella y ricotta</string>
     <string name="info_pizza_carnivora">Queso mozzarella, salame, pepperoni, chorizo y tocino</string>
     <string name="info_pizza_jamon">Queso mozzarella y jamón</string>
-    <string name="info_pizza_peperoni">Queso mozzarella y chorizo</string>
+    <string name="info_pizza_peperoni">Queso mozzarella y pepperoni</string>
     <string name="info_pizza_vegetariana">Queso mozzarella, brócoli, tomate, aceituna, morrón y cebolla</string>
 
 </resources>
