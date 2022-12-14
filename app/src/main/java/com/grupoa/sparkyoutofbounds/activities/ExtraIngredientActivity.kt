@@ -1,7 +1,6 @@
 package com.grupoa.sparkyoutofbounds.activities
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.grupoa.sparkyoutofbounds.activities.MenuActivity.Companion.PIZZA
@@ -24,7 +23,7 @@ class ExtraIngredientActivity : AppCompatActivity() {
         setViews()
         setListeners()
 
-        Log.d("pizza en otra pantalla", pizza.toString())
+//        Log.d("pizza en otra pantalla", pizza.toString())
         setIngredientSelect()
     }
 
@@ -38,11 +37,11 @@ class ExtraIngredientActivity : AppCompatActivity() {
     }
 
     fun setViews(){
-        val newText: String
         val precioP = pizza.getPartialPrice()
-        newText = "${String.format("%.2f",precioP)} Bs"
+        val newText = "${String.format("%.2f",precioP)} Bs"
         binding.precioP.text = newText
         binding.precioT.text = newText
+        binding.imagen.setImageResource(pizza.image)
     }
 
     fun setIngredientSelect() {

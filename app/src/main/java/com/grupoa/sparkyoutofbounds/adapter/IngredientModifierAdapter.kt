@@ -1,7 +1,6 @@
 package com.grupoa.sparkyoutofbounds.adapter
 
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -36,7 +35,9 @@ class IngredientModifierAdapter :
     inner class IngredientModifierViewHolder(private val binding: ItemIngredientModifierBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        init {
+        fun setData(ingredient: Ingredient) {
+            binding.ingrediente.text = ingredient.name
+
             binding.radioButtons.setOnCheckedChangeListener { _, id ->
                 val currentIngredient = ingredientModifierList[adapterPosition]
                 when (id) {
@@ -64,15 +65,11 @@ class IngredientModifierAdapter :
                 newText = "${String.format("%.2f",priceTotal)} Bs"
                 priceT.text = newText
 
-                for (ing in ingredientModifierList) {
-                    Log.d("Ingredient: ", ing.toString())
-                }
-
+//                for (ing in ingredientModifierList) {
+//                    Log.d("Ingredient: ", ing.toString())
+//                }
             }
-        }
 
-        fun setData(ingredient: Ingredient) {
-            binding.ingrediente.text = ingredient.name
         }
     }
 

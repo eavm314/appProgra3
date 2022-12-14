@@ -10,8 +10,7 @@ import com.grupoa.sparkyoutofbounds.dataClasses.Pizza
 import com.grupoa.sparkyoutofbounds.databinding.ActivityMenuBinding
 
 class MenuActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMenuBinding
-
+    private lateinit var binding: ActivityMenuBinding
 
     companion object {
         const val PIZZA: String = "enviar_pizza"
@@ -33,7 +32,7 @@ class MenuActivity : AppCompatActivity() {
 
     fun setRecyclerView(){
 
-        val pizzaList = listOf<Pizza>(
+        val pizzaList = listOf(
             Pizza(getString(R.string.title_pizza_hawaiana),R.drawable.pizza_hawaiana,getString(R.string.info_pizza_hawaiana)),
             Pizza(getString(R.string.title_pizza_4estaciones),R.drawable.pizza_4estaciones,getString(R.string.info_pizza_4estaciones)),
             Pizza(getString(R.string.title_pizza_carnivora),R.drawable.pizza_carnivora,getString(R.string.info_pizza_carnivora)),

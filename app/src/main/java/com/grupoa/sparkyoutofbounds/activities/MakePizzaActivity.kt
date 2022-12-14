@@ -2,7 +2,6 @@ package com.grupoa.sparkyoutofbounds.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.Toast
@@ -26,10 +25,10 @@ class MakePizzaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMakePizzaBinding.inflate(layoutInflater)
+        pizza = intent.getSerializableExtra(PIZZA) as Pizza
         setContentView(binding.root)
+        setViews()
         setListeners()
-
-        pizza = Pizza()
         setIngredientSelect()
     }
 
@@ -71,9 +70,15 @@ class MakePizzaActivity : AppCompatActivity() {
             val price = pizza.getPartialPrice()
             val newText = "${String.format("%.2f",price)} Bs"
             binding.precioP.text = newText
-            Log.d("pizza", pizza.toString())
+//            Log.d("pizza", pizza.toString())
         }
+    }
 
+    fun setViews(){
+        val precioR = pizza.getRegularPrice()
+        val newText = "${String.format("%.2f",precioR)} Bs"
+        binding.precioR.text = newText
+        binding.precioP.text = newText
     }
 
     fun setIngredientSelect() {
