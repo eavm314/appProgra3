@@ -32,22 +32,16 @@ class LoginActivity : AppCompatActivity() {
             btnSendLogin.setOnClickListener {
                 val email = emailUser.text.toString()
                 val pass = passUser.text.toString()
-
                 if (currentUser == null) {
                     showMessage("Debes tener una sesión iniciada para continuar")
+                } else {
+                    if(validateData(email, pass))
+                        loginUser(email, pass)
                 }
-
-                if(validateData(email, pass))
-                    loginUser(email, pass)
-
-
-
             }
 
         }
     }
-
-
 
     private fun loginUser(email: String, password: String){
         auth.signInWithEmailAndPassword(email, password)
@@ -59,6 +53,7 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
+
     private fun validateData(email: String, password: String): Boolean {
         var valid = true
         if (email.isEmpty()) {

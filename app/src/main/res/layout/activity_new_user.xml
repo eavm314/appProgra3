@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Ingrese su correo"
-                    android:maxLength="30"
+                    android:maxLength="50"
                     android:inputType="textEmailAddress"
                     style="@style/edit_texts"
                     app:layout_constraintTop_toTopOf="@id/view2"

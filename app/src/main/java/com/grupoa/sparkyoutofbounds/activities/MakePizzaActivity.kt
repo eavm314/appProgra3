@@ -26,10 +26,9 @@ class MakePizzaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMakePizzaBinding.inflate(layoutInflater)
+        pizza = intent.getSerializableExtra(PIZZA) as Pizza
         setContentView(binding.root)
         setListeners()
-
-        pizza = Pizza()
         setIngredientSelect()
     }
 

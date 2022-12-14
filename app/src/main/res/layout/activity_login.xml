@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"                        app:layout_constraintBottom_toBottomOf="@id/line_login"
                         android:hint="Correo"
-                        android:maxLength="30"
+                        android:maxLength="50"
                         android:inputType="textEmailAddress"
                         android:textSize="20sp"
                         style="@style/edit_texts"

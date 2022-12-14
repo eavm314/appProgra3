@@ -32,10 +32,10 @@ class PizzaCardAdapter(var context: Context) : RecyclerView.Adapter<PizzaCardAda
         inner class PizzaCardViewHolder(private var binding: ItemPizzaCardBinding):
             RecyclerView.ViewHolder(binding.root){
 
-            fun setData(data: Pizza){
-                binding.textTitle.text = data.title
-                binding.textInfo.text = data.info
-                binding.imgPizza.setImageResource(data.image)
+            fun setData(pizza: Pizza){
+                binding.textTitle.text = pizza.title
+                binding.textInfo.text = pizza.info
+                binding.imgPizza.setImageResource(pizza.image)
                 binding.imgMenu.setOnClickListener{
                     if (binding.contText.visibility == View.GONE) {
                        // TransitionManager.beginDelayedTransition(binding.contText, Slide(Gravity.TOP))
@@ -44,6 +44,11 @@ class PizzaCardAdapter(var context: Context) : RecyclerView.Adapter<PizzaCardAda
                        // TransitionManager.beginDelayedTransition(binding.contText, AutoTransition())
                         binding.contText.visibility = View.GONE
                     }
+                }
+
+                val str = pizza.selected
+                for( i in 0 .. 17 ){
+                    pizza.ingredients[i].isSelected = (str[i] == '1')
                 }
 
                 binding.btnGoToMakePizza.setOnClickListener{
