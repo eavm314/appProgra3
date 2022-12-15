@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/ingredients_title"
-        style="@style/titles"
+        style="@style/textViewsTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -90,7 +90,7 @@
 
             <TextView
                 android:id="@+id/size_title"
-                style="@style/titles"
+                style="@style/textViewsTittle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"

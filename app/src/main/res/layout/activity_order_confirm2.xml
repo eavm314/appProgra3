@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OrderConfirmActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titlepizza"
+        style="@style/textViews"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/imagepizza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="45dp"
+        android:text="Pizza"
+        />
+
+    <ImageView
+        android:id="@+id/imagepizza"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="124dp"
+        android:src="@drawable/pizza_hammer_comp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titlebilling"
+        style="@style/textViewsTittle"
+        app:layout_constraintTop_toBottomOf="@id/imagepizza"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="24dp"
+        android:text="Datos para la factura:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/subtitles"
+        android:id="@+id/name"
+        app:layout_constraintTop_toBottomOf="@id/titlebilling"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="24dp"
+        android:text="Nombre:" />
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Juan Perez"
+        android:maxLength="15"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_margin="10dp"
+        android:inputType="text"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/subtitles"
+        android:id="@+id/nit_title"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:text="NIT:" />
+
+    <EditText
+        android:id="@+id/edit_text_nit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="7777777777777"
+        android:maxLength="15"
+        app:layout_constraintTop_toBottomOf="@+id/nit_title"
+        android:layout_margin="10dp"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/subtitles"
+        android:id="@+id/bill_paid"
+        android:textColor="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_nit"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="24dp"
+        android:text="El precio a pagar es: " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/subtitles"
+        android:id="@+id/bill_paid_number"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toEndOf="@id/bill_paid"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_nit"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:text="0 Bs " />
+
+    <Button
+        android:id="@+id/confirm_button"
+        style="@style/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:text="Confirmar Pedido"
+        app:layout_constraintTop_toBottomOf="@id/bill_paid"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/subtitles2"
+        android:id="@+id/aditional_option"
+        app:layout_constraintTop_toBottomOf="@id/confirm_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:text="Si deseas factura en blanco deja los datos vacios." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

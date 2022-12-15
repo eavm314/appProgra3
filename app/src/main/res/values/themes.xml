@@ -60,4 +60,11 @@
         <item name="paddingStart">14dp</item>
     </style>
 
+    <style name="textViewsTittle">
+        <item name="fontFamily">@font/josefin_sans</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="paddingStart">14dp</item>
+    </style>
+
 </resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.OrderMapActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billing_resume_title"
+        style="@style/textViewsTittle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="24dp"
+        android:text="Resumen del pedido"
+        android:textSize="24dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_resume"
+        style="@style/subtitles"
+        app:layout_constraintTop_toBottomOf="@id/billing_resume_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:text="Nombre:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_content"
+        style="@style/subtitles"
+        app:layout_constraintTop_toBottomOf="@id/billing_resume_title"
+        app:layout_constraintStart_toEndOf="@id/name_resume"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:text="En Blanco"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nit_resume"
+        style="@style/subtitles"
+        app:layout_constraintTop_toBottomOf="@id/name_resume"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:text="NIT:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nit_data"
+        style="@style/subtitles"
+        app:layout_constraintTop_toBottomOf="@id/name_resume"
+        app:layout_constraintStart_toEndOf="@id/nit_resume"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:text="En Blanco"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paid_resume_value"
+        style="@style/subtitles"
+        app:layout_constraintTop_toBottomOf="@id/nit_resume"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:text="30Bs"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paid_resume_tittle"
+        style="@style/subtitles"
+        app:layout_constraintTop_toBottomOf="@id/nit_resume"
+        app:layout_constraintEnd_toStartOf="@id/paid_resume_value"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:text="Total:"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_resume_title"
+        style="@style/subtitles"
+        app:layout_constraintTop_toBottomOf="@id/nit_resume"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:text="Pizza:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_resume_content"
+        style="@style/subtitles"
+        app:layout_constraintTop_toBottomOf="@id/nit_resume"
+        app:layout_constraintStart_toEndOf="@id/order_resume_title"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:text="Pizza"
+        />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="160dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/subtitles2"
+        app:layout_constraintBottom_toTopOf="@id/confirm_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="4dp"
+
+        android:text="Presiona sobre tu ubicación para indicarnos a donde enviar tu pedido"
+        />
+    <Button
+        android:id="@+id/confirm_button"
+        style="@style/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Confirmar dirección"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="36dp"
+        android:layout_marginLeft="24dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

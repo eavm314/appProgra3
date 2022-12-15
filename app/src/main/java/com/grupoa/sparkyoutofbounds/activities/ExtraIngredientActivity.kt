@@ -1,5 +1,6 @@
 package com.grupoa.sparkyoutofbounds.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,10 +28,9 @@ class ExtraIngredientActivity : AppCompatActivity() {
 
     private fun setListeners() {
         binding.continueButton.setOnClickListener {
-            // TODO: Cambiar a la pantalla de informacion
-//            val intent = Intent(this, ExtraIngredientActivity::class.java)
-//            intent.putExtra(PIZZA, pizza)
-//            startActivity(intent)
+            val intent = Intent(this, OrderConfirmActivity::class.java)
+            intent.putExtra(PIZZA, pizza)
+            startActivity(intent)
         }
     }
 
