@@ -7,8 +7,8 @@
     <string name="btn_new_user_message"> <u>Crear usuario</u> </string>
     <string name="create_user_text_view1">Nombre Completo</string>
     <string name="continuar">Continuar</string>
-    <string name="ingredientes">Ingredientes</string>
-    <string name="tamanio">Tamaño</string>
+    <string name="elegir_ingredientes">Elegir Ingredientes</string>
+    <string name="seleccionar_tamanio">Seleccionar Tamaño</string>
     <string name="title_pizza_hawaiana">----Pizza Hawaiana----</string>
     <string name="title_pizza_queso">----Pizza Mozzarella----</string>
     <string name="title_pizza_criolla">----Pizza Criolla----</string>
@@ -30,5 +30,27 @@
     <string name="info_pizza_jamon">Queso mozzarella y jamón</string>
     <string name="info_pizza_peperoni">Queso mozzarella y pepperoni</string>
     <string name="info_pizza_vegetariana">Queso mozzarella, brócoli, tomate, aceituna, morrón y cebolla</string>
+    <string name="precio_regular">Precio Regular:</string>
+    <string name="_0bs">0.00 Bs</string>
+    <string name="pequenia">Pequeña</string>
+    <string name="regular">Regular</string>
+    <string name="grande">Grande</string>
+    <string name="interminable">Interminable</string>
+    <string name="_30cm">30cm</string>
+    <string name="_50cm">50cm</string>
+    <string name="_70cm">70cm</string>
+    <string name="_100cm">100cm</string>
+    <string name="x0_75">x0.75</string>
+    <string name="x1_00">x1.00</string>
+    <string name="x1_50">x1.50</string>
+    <string name="x2_00">x2.00</string>
+    <string name="precio_parcial">Precio Parcial:</string>
+    <string name="elegir_cantidad">Elegir Cantidad</string>
+    <string name="ingrediente">Ingrediente</string>
+    <string name="poco">Poco</string>
+    <string name="normal">Normal</string>
+    <string name="extra">Extra</string>
+    <string name="incremento">Incremento</string>
+    <string name="precio_total">Precio Total:</string>
 
 </resources>

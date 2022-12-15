@@ -22,33 +22,31 @@ class ExtraIngredientActivity : AppCompatActivity() {
         setContentView(binding.root)
         setViews()
         setListeners()
-
-//        Log.d("pizza en otra pantalla", pizza.toString())
-        setIngredientSelect()
+        setIngredientModifierRecyclerView()
     }
 
-    fun setListeners() {
+    private fun setListeners() {
         binding.continueButton.setOnClickListener {
-            // TODO: Cambiar a la pantalla del mapa
+            // TODO: Cambiar a la pantalla de informacion
 //            val intent = Intent(this, ExtraIngredientActivity::class.java)
 //            intent.putExtra(PIZZA, pizza)
 //            startActivity(intent)
         }
     }
 
-    fun setViews(){
-        val precioP = pizza.getPartialPrice()
-        val newText = "${String.format("%.2f",precioP)} Bs"
-        binding.precioP.text = newText
-        binding.precioT.text = newText
-        binding.imagen.setImageResource(pizza.image)
+    private fun setViews(){
+        val priceP = pizza.getPartialPrice()
+        val newText = "${String.format("%.2f",priceP)} Bs"
+        binding.priceP.text = newText
+        binding.priceT.text = newText
+        binding.image.setImageResource(pizza.image)
     }
 
-    fun setIngredientSelect() {
+    private fun setIngredientModifierRecyclerView() {
         ingredientModifierAdapter.addIngredientModifier(pizza)
-        ingredientModifierAdapter.setTextView(binding.precioT)
+        ingredientModifierAdapter.setTextView(binding.priceT)
 
-        binding.cantidadIngredientes.apply {
+        binding.ingredientsAmount.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = ingredientModifierAdapter
         }

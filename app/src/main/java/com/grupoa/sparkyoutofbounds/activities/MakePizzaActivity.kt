@@ -29,10 +29,10 @@ class MakePizzaActivity : AppCompatActivity() {
         setContentView(binding.root)
         setViews()
         setListeners()
-        setIngredientSelect()
+        setIngredientSelectRecyclerView()
     }
 
-    fun setListeners() {
+    private fun setListeners() {
         binding.continueButton.setOnClickListener {
             if (pizza.ingredients.none { it.isSelected }) {
                 Toast.makeText(this, "Seleccione al menos un ingrediente", Toast.LENGTH_SHORT)
@@ -47,9 +47,9 @@ class MakePizzaActivity : AppCompatActivity() {
         }
 
         binding.radioButtons.setOnCheckedChangeListener { _, id ->
-            binding.preciosTamanios.forEach { it.visibility = INVISIBLE }
+            binding.sizesPrice.forEach { it.visibility = INVISIBLE }
             when (id) {
-                binding.pequenia.id -> {
+                binding.small.id -> {
                     pizza.size = 0.75
                     binding.p1.visibility = VISIBLE
                 }
@@ -57,11 +57,11 @@ class MakePizzaActivity : AppCompatActivity() {
                     pizza.size = 1.0
                     binding.p2.visibility = VISIBLE
                 }
-                binding.grande.id -> {
+                binding.large.id -> {
                     pizza.size = 1.5
                     binding.p3.visibility = VISIBLE
                 }
-                binding.interminable.id -> {
+                binding.extraLarge.id -> {
                     pizza.size = 2.0
                     binding.p4.visibility = VISIBLE
                 }
@@ -69,30 +69,29 @@ class MakePizzaActivity : AppCompatActivity() {
 
             val price = pizza.getPartialPrice()
             val newText = "${String.format("%.2f",price)} Bs"
-            binding.precioP.text = newText
-//            Log.d("pizza", pizza.toString())
+            binding.priceP.text = newText
         }
     }
 
-    fun setViews(){
-        val precioR = pizza.getRegularPrice()
-        val newText = "${String.format("%.2f",precioR)} Bs"
-        binding.precioR.text = newText
-        binding.precioP.text = newText
+    private fun setViews(){
+        val priceR = pizza.getRegularPrice()
+        val newText = "${String.format("%.2f",priceR)} Bs"
+        binding.priceR.text = newText
+        binding.priceP.text = newText
     }
 
-    fun setIngredientSelect() {
-        ingredientSelectAdapterLeft.setTextViews(binding.precioR, binding.precioP)
-        ingredientSelectAdapterRight.setTextViews(binding.precioR, binding.precioP)
+    private fun setIngredientSelectRecyclerView() {
+        ingredientSelectAdapterLeft.setTextViews(binding.priceR, binding.priceP)
+        ingredientSelectAdapterRight.setTextViews(binding.priceR, binding.priceP)
 
         ingredientSelectAdapterLeft.addIngredientSelects(pizza,true)
-        binding.ingredientesLeft.apply {
+        binding.ingredientsLeft.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = ingredientSelectAdapterLeft
         }
 
         ingredientSelectAdapterRight.addIngredientSelects(pizza,false)
-        binding.ingredientesRight.apply {
+        binding.ingredientsRight.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = ingredientSelectAdapterRight
         }

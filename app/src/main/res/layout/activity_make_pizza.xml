@@ -7,25 +7,25 @@
     tools:context=".activities.MakePizzaActivity">
 
     <TextView
-        android:id="@+id/title_ingredientes"
+        android:id="@+id/ingredients_title"
         style="@style/titles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ingredientes"
         android:layout_margin="10dp"
+        android:text="@string/elegir_ingredientes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:id="@+id/ingredientes_scroll"
+        android:id="@+id/ingredients_scroll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintTop_toBottomOf="@id/title_ingredientes"
-        app:layout_constraintBottom_toTopOf="@id/continue_button">
+        app:layout_constraintBottom_toTopOf="@id/continue_button"
+        app:layout_constraintTop_toBottomOf="@id/ingredients_title">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ingredientes"
+            android:id="@+id/ingredients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -34,76 +34,77 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline_one"
+                android:id="@+id/guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.5" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/ingredientes_left"
+                android:id="@+id/ingredients_left"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
                 android:overScrollMode="never"
-                app:layout_constraintEnd_toStartOf="@id/guideline_one"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:listitem="@layout/item_ingredient_select" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/ingredientes_right"
+                android:id="@+id/ingredients_right"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:overScrollMode="never"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/guideline_one"
+                app:layout_constraintStart_toStartOf="@id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:listitem="@layout/item_ingredient_select" />
 
             <LinearLayout
-                android:id="@+id/precio_regular"
+                android:id="@+id/regular_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ingredientes_left">
+                app:layout_constraintTop_toBottomOf="@+id/ingredients_left">
 
                 <TextView
-                    android:layout_width="120dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:text="Precio Regular:"
-                    android:textSize="15sp"
+                    android:text="@string/precio_regular"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/precio_r"
-                    android:layout_width="80dp"
+                    android:id="@+id/price_r"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="0.00 Bs" />
+                    android:text="@string/_0bs"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/title_tamanio"
+                android:id="@+id/size_title"
                 style="@style/titles"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tamanio"
                 android:layout_marginTop="30dp"
+                android:text="@string/seleccionar_tamanio"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/precio_regular" />
+                app:layout_constraintTop_toBottomOf="@id/regular_price" />
 
             <LinearLayout
-                android:id="@+id/tamanios"
+                android:id="@+id/sizes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/title_tamanio">
+                app:layout_constraintTop_toBottomOf="@id/size_title">
 
                 <TextView
                     style="@style/subtitles"
@@ -111,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Pequeña" />
+                    android:text="@string/pequenia" />
 
                 <TextView
                     style="@style/subtitles"
@@ -119,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Regular" />
+                    android:text="@string/regular" />
 
                 <TextView
                     style="@style/subtitles"
@@ -127,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Grande" />
+                    android:text="@string/grande" />
 
                 <TextView
                     style="@style/subtitles"
@@ -135,44 +136,44 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Interminable" />
+                    android:text="@string/interminable" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/tamanios_cm"
+                android:id="@+id/sizes_cm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/tamanios">
+                app:layout_constraintTop_toBottomOf="@id/sizes">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="30cm" />
+                    android:text="@string/_30cm" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="50cm" />
+                    android:text="@string/_50cm" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="70cm" />
+                    android:text="@string/_70cm" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="100cm" />
+                    android:text="@string/_100cm" />
 
             </LinearLayout>
 
@@ -181,10 +182,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/tamanios_cm">
+                app:layout_constraintTop_toBottomOf="@id/sizes_cm">
 
                 <RadioButton
-                    android:id="@+id/pequenia"
+                    android:id="@+id/small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
@@ -194,19 +195,19 @@
                     android:id="@+id/regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:layout_marginStart="50dp"
-                    android:buttonTint="@color/green" />
+                    android:buttonTint="@color/green"
+                    android:checked="true" />
 
                 <RadioButton
-                    android:id="@+id/grande"
+                    android:id="@+id/large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
                     android:buttonTint="@color/green" />
 
                 <RadioButton
-                    android:id="@+id/interminable"
+                    android:id="@+id/extra_large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
@@ -215,7 +216,7 @@
             </RadioGroup>
 
             <LinearLayout
-                android:id="@+id/precios_tamanios"
+                android:id="@+id/sizes_price"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -229,9 +230,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:visibility="invisible"
-                    android:text="x0.75"
-                    android:textStyle="bold" />
+                    android:text="@string/x0_75"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/p2"
@@ -239,7 +240,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="x1.00"
+                    android:text="@string/x1_00"
                     android:textStyle="bold" />
 
                 <TextView
@@ -248,9 +249,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:visibility="invisible"
-                    android:text="x1.50"
-                    android:textStyle="bold" />
+                    android:text="@string/x1_50"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/p4"
@@ -258,49 +259,50 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:visibility="invisible"
-                    android:text="x2.00"
-                    android:textStyle="bold" />
+                    android:text="@string/x2_00"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
 
             </LinearLayout>
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <LinearLayout
-        android:id="@+id/precio_parcial"
+        android:id="@+id/partial_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="25dp"
         android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="Precio Parcial:"
-            android:textSize="15sp"
+            android:text="@string/precio_parcial"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/precio_p"
-            android:layout_width="80dp"
+            android:id="@+id/price_p"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:text="0.00 Bs" />
+            android:text="@string/_0bs"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <Button
-            android:id="@+id/continue_button"
-            style="@style/buttons"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/continuar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+        android:id="@+id/continue_button"
+        style="@style/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

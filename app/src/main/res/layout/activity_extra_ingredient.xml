@@ -11,17 +11,17 @@
         style="@style/titles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Elegir Cantidad"
+        android:text="@string/elegir_cantidad"
         android:layout_margin="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:id="@+id/ingredientes_scroll"
+        android:id="@+id/ingredients_scroll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@id/precio_parcial"
+        app:layout_constraintBottom_toTopOf="@id/partial_price"
         app:layout_constraintTop_toBottomOf="@id/extras_title">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imagen"
+                android:id="@+id/image"
                 android:layout_width="300dp"
                 android:layout_height="180dp"
                 android:layout_margin="10dp"
@@ -50,14 +50,14 @@
                 android:weightSum="6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imagen">
+                app:layout_constraintTop_toBottomOf="@id/image">
 
                 <TextView
                     style="@style/subtitles2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.8"
-                    android:text="Ingrediente" />
+                    android:text="@string/ingrediente" />
 
                 <TextView
                     style="@style/subtitles2"
@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Poco" />
+                    android:text="@string/poco" />
 
                 <TextView
                     style="@style/subtitles2"
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Normal" />
+                    android:text="@string/normal" />
 
                 <TextView
                     style="@style/subtitles2"
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Extra" />
+                    android:text="@string/extra" />
 
                 <TextView
                     style="@style/subtitles2"
@@ -89,12 +89,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.2"
                     android:gravity="center"
-                    android:text="Incremento" />
+                    android:text="@string/incremento" />
 
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/cantidad_ingredientes"
+                android:id="@+id/ingredients_amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -109,32 +109,33 @@
 
 
     <LinearLayout
-        android:id="@+id/precio_parcial"
+        android:id="@+id/partial_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/precio_total">
+        app:layout_constraintBottom_toTopOf="@+id/total_price">
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="Precio Parcial:"
-            android:textSize="15sp"
+            android:text="@string/precio_parcial"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/precio_p"
-            android:layout_width="80dp"
+            android:id="@+id/price_p"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:text="0.00 Bs" />
+            android:text="@string/_0bs"
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/precio_total"
+        android:id="@+id/total_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -144,18 +145,19 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="Precio Total:"
-            android:textSize="15sp"
+            android:text="@string/precio_total"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/precio_t"
-            android:layout_width="80dp"
+            android:id="@+id/price_t"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:text="0.00 Bs" />
+            android:text="@string/_0bs"
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <Button
@@ -163,7 +165,7 @@
         style="@style/buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginEnd="20dp"
         android:text="@string/continuar"
         app:layout_constraintBottom_toBottomOf="parent"

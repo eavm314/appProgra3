@@ -19,9 +19,7 @@ class IngredientSelectAdapter :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IngredientSelectViewHolder =
         IngredientSelectViewHolder(
             ItemIngredientSelectBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
+                LayoutInflater.from(parent.context), parent, false
             )
         )
 
@@ -35,28 +33,24 @@ class IngredientSelectAdapter :
         RecyclerView.ViewHolder(binding.root) {
 
         fun setData(ingredient: Ingredient) {
-            binding.ingrediente.isChecked = ingredient.isSelected
-            binding.ingrediente.text = ingredient.name
+            binding.ingredient.isChecked = ingredient.isSelected
+            binding.ingredient.text = ingredient.name
             val text = "${String.format("%.2f", ingredient.price)} Bs"
             binding.precioI.text = text
 
-            binding.ingrediente.setOnClickListener {
-                val isChecked = binding.ingrediente.isChecked
+            binding.ingredient.setOnClickListener {
+                val isChecked = binding.ingredient.isChecked
                 ingredientSelectList[adapterPosition].isSelected = isChecked
 
                 var newText: String
 
                 val price1 = pizza.getRegularPrice()
-                newText = "${String.format("%.2f",price1)} Bs"
+                newText = "${String.format("%.2f", price1)} Bs"
                 priceR.text = newText
 
                 val price2 = pizza.getPartialPrice()
-                newText = "${String.format("%.2f",price2)} Bs"
+                newText = "${String.format("%.2f", price2)} Bs"
                 priceP.text = newText
-
-//                for (ing in ingredientSelectList) {
-//                    Log.d("Ingredient: ", ing.toString())
-//                }
             }
         }
     }

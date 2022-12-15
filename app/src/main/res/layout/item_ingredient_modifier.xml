@@ -8,12 +8,11 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/ingrediente"
+        android:id="@+id/ingredient"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:fontFamily="@font/cardo"
-        android:text="Ingrediente" />
+        android:fontFamily="@font/cardo" />
 
     <RadioGroup
         android:id="@+id/radio_buttons"
@@ -22,7 +21,7 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/poco"
+            android:id="@+id/less"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="15dp"
@@ -49,11 +48,12 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/precio"
+        android:id="@+id/price"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:gravity="end"
-        android:text=" 0.00 Bs" />
+        android:text="@string/_0bs"
+        android:textStyle="bold"/>
 
 </LinearLayout>

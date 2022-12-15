@@ -27,7 +27,7 @@ class IngredientModifierAdapter :
     )
 
     override fun onBindViewHolder(holder: IngredientModifierViewHolder, position: Int) {
-        holder.setData(pizza.ingredients[position])
+        holder.setData(ingredientModifierList[position])
     }
 
     override fun getItemCount(): Int = ingredientModifierList.size
@@ -36,38 +36,34 @@ class IngredientModifierAdapter :
         RecyclerView.ViewHolder(binding.root) {
 
         fun setData(ingredient: Ingredient) {
-            binding.ingrediente.text = ingredient.name
+            binding.ingredient.text = ingredient.name
 
             binding.radioButtons.setOnCheckedChangeListener { _, id ->
                 val currentIngredient = ingredientModifierList[adapterPosition]
                 when (id) {
-                    binding.poco.id -> {
+                    binding.less.id -> {
                         currentIngredient.modifier = -0.2
-                        binding.precio.setTextColor(Color.parseColor("#FF0000"))
+                        binding.price.setTextColor(Color.parseColor("#FF0000"))
                     }
                     binding.normal.id -> {
                         currentIngredient.modifier = 0.0
-                        binding.precio.setTextColor(Color.parseColor("#000000"))
+                        binding.price.setTextColor(Color.parseColor("#000000"))
                     }
                     binding.extra.id -> {
                         currentIngredient.modifier = 0.4
-                        binding.precio.setTextColor(Color.parseColor("#00FF00"))
+                        binding.price.setTextColor(Color.parseColor("#01E50F"))
                     }
                 }
 
                 var newText: String
 
-                val priceCurrent = currentIngredient.price*currentIngredient.modifier
-                newText = "${(if(priceCurrent>0) '+' else "")}${String.format("%.2f",priceCurrent)} Bs"
-                binding.precio.text = newText
+                val currentPrice = currentIngredient.price*currentIngredient.modifier
+                newText = "${(if(currentPrice>0) '+' else "")}${String.format("%.2f",currentPrice)} Bs"
+                binding.price.text = newText
 
-                val priceTotal = pizza.getTotalPrice()
-                newText = "${String.format("%.2f",priceTotal)} Bs"
+                val totalPrice = pizza.getTotalPrice()
+                newText = "${String.format("%.2f",totalPrice)} Bs"
                 priceT.text = newText
-
-//                for (ing in ingredientModifierList) {
-//                    Log.d("Ingredient: ", ing.toString())
-//                }
             }
 
         }
