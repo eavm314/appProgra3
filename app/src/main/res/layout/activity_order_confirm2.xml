@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/add_nit"
         style="@style/edit_texts"
-        android:layout_margin="24dp"
+        android:layout_marginHorizontal="24dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:maxLength="15"
         app:layout_constraintTop_toBottomOf="@+id/nit_title"
@@ -121,11 +121,12 @@
         android:id="@+id/confirm_button"
         style="@style/buttons"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:text="@string/confirm_text"
         app:layout_constraintTop_toBottomOf="@id/bill_paid"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/aditional_option"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -134,6 +135,7 @@
         android:id="@+id/aditional_option"
         app:layout_constraintTop_toBottomOf="@id/confirm_button"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginStart="24dp"
         android:text="@string/information_confirm" />

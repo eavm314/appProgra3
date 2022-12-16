@@ -41,7 +41,7 @@ class MenuActivity : AppCompatActivity() {
             Pizza(getString(R.string.title_pizza_jamon),R.drawable.pizza_jamon,getString(R.string.info_pizza_jamon), "000000001100000000"),
             Pizza(getString(R.string.title_pizza_new_york),R.drawable.pizza_new_york,getString(R.string.info_pizza_new_york), "010010110100100000"),
             Pizza(getString(R.string.title_pizza_peperoni),R.drawable.pizza_peperoni,getString(R.string.info_pizza_peperoni), "000000000100100000"),
-            Pizza(getString(R.string.title_pizza_queso),R.drawable.pizza_queso,getString(R.string.info_pizza_queso), "000000000100000000"),
+            Pizza(getString(R.string.title_pizza_queso),R.drawable.pizza_queso,getString(R.string.info_pizza_queso), "000000000100000001"),
             Pizza(getString(R.string.title_pizza_ricotta),R.drawable.pizza_ricotta,getString(R.string.info_pizza_ricotta), "000000000100001000"),
             Pizza(getString(R.string.title_pizza_vegetariana),R.drawable.pizza_vegetariana,getString(R.string.info_pizza_vegetariana), "101010000101000001")
         )

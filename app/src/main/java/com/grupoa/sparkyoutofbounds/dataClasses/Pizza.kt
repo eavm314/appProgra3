@@ -3,7 +3,7 @@ package com.grupoa.sparkyoutofbounds.dataClasses
 import com.grupoa.sparkyoutofbounds.R
 
 data class Pizza(
-    val title: String = "",
+    val title: String = "Pizza personalizada",
     val image: Int = R.drawable.pizza_4estaciones,
     val info: String = "",
     var selected : String = "000000000000000000",

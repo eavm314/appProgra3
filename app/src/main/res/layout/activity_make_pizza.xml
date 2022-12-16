@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/elegir_ingredientes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -87,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="@string/_0bs"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <TextView
@@ -295,7 +296,7 @@
             android:layout_height="wrap_content"
             android:gravity="end"
             android:text="@string/_0bs"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 
     <Button
@@ -307,6 +308,7 @@
         android:layout_marginBottom="15dp"
         android:text="@string/continuar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/partial_price"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
