@@ -34,8 +34,8 @@ class MakePizzaActivity : AppCompatActivity() {
 
     private fun setListeners() {
         binding.continueButton.setOnClickListener {
-            if (pizza.ingredients.none { it.isSelected }) {
-                Toast.makeText(this, "Seleccione al menos un ingrediente", Toast.LENGTH_SHORT)
+            if (pizza.ingredients.count { it.isSelected } < 2) {
+                Toast.makeText(this, "Seleccione al menos 2 ingredientes", Toast.LENGTH_SHORT)
                     .show()
                 return@setOnClickListener
             }
