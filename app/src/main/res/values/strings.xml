@@ -82,7 +82,7 @@
     <string name="resume_information">Presiona sobre tu ubicación\npara indicarnos a donde enviar tu pedido</string>
     <string name="confirm_address">Confirmar dirección</string>
     <string name="thanks">¡Gracias!</string>
-    <string name="thanks_message">Por comprar en la mejor pizzeria. Nos encargaremos de enviarte la pizza hasta tu dirección.</string>
+    <string name="thanks_message">Por comprar en la mejor pizzeria. Nos encargaremos de enviarte tu pizza hasta tu dirección.</string>
     <string name="comeback_button">Volver al Menu</string>
     <string name="make_order_pizza">Pedir esta pizza</string>
     <string name="go_to">Acceder</string>
