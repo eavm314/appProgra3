@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="45dp"
-        android:text="Pizza"
+        android:text="@string/pizza"
         />
 
     <ImageView
@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="45dp"
         android:layout_marginStart="24dp"
-        android:text="Datos para la factura:"
+        android:text="@string/bill_title"
         />
 
     <TextView
@@ -51,17 +51,20 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="25dp"
         android:layout_marginStart="24dp"
-        android:text="Nombre:" />
+        android:text="@string/bill_name" />
 
     <EditText
         android:id="@+id/edit_text_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Juan Perez"
-        android:maxLength="15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="@string/bill_add_name"
+        style="@style/edit_texts"
+        android:maxLength="40"
         app:layout_constraintTop_toBottomOf="@+id/name"
-        android:layout_margin="10dp"
-        android:inputType="text"/>
+        android:layout_margin="24dp"
+        android:inputType="text"
+        android:layout_marginStart="20dp"/>
 
 
     <TextView
@@ -71,19 +74,24 @@
         android:id="@+id/nit_title"
         app:layout_constraintTop_toBottomOf="@id/edit_text_name"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_nit"
         android:layout_marginTop="10dp"
         android:layout_marginStart="24dp"
-        android:text="NIT:" />
+        android:text="@string/nit"
+        />
 
     <EditText
         android:id="@+id/edit_text_nit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="7777777777777"
+        android:hint="@string/add_nit"
+        style="@style/edit_texts"
+        android:layout_margin="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:maxLength="15"
         app:layout_constraintTop_toBottomOf="@+id/nit_title"
-        android:layout_margin="10dp"
-        android:inputType="number"/>
+        android:inputType="number"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -95,7 +103,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="25dp"
         android:layout_marginStart="24dp"
-        android:text="El precio a pagar es: " />
+        android:text="@string/total" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -107,7 +115,7 @@
         app:layout_constraintTop_toBottomOf="@id/edit_text_nit"
         android:layout_marginTop="25dp"
         android:layout_marginStart="16dp"
-        android:text="0 Bs " />
+        android:text="@string/total_money" />
 
     <Button
         android:id="@+id/confirm_button"
@@ -115,7 +123,7 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_margin="20dp"
-        android:text="Confirmar Pedido"
+        android:text="@string/confirm_text"
         app:layout_constraintTop_toBottomOf="@id/bill_paid"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -128,7 +136,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginStart="24dp"
-        android:text="Si deseas factura en blanco deja los datos vacios." />
+        android:text="@string/information_confirm" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

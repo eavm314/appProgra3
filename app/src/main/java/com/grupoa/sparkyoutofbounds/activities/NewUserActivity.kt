@@ -71,5 +71,6 @@ class NewUserActivity : AppCompatActivity() {
         val intentRedirect = Intent(this, LoginActivity::class.java)
         startActivity(intentRedirect)
         finish()
+
     }
 }

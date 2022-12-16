@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="20dp"
-        app:layout_constraintDimensionRatio="3:2.5"
+        app:layout_constraintDimensionRatio="5:5"
         android:background="@color/pinky"
         app:cardCornerRadius="40dp">
 
@@ -22,20 +22,19 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:padding="20dp">
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/message_tittle"
-                android:text="Gracias!!!!!"
+                android:text="@string/thanks"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/josefin_sans"
-                android:textStyle="bold|italic"
+                style="@style/textViews"
                 android:textSize="40sp"/>
 
             <TextView
@@ -46,9 +45,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/josefin_sans"
-                android:text="Por comprar en la mejor pizzeria. Nos encargaremos de enviarte la pizza hasta tu dirección."
+                style="@style/edit_texts"
                 android:textSize="30sp"
+                android:text="@string/thanks_message"
                 />
 
 
@@ -59,7 +58,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/message_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:text="Volver al Menu"
+                android:text="@string/comeback_button"
                 android:textSize="20sp"
                 style="@style/buttons"/>
 

@@ -51,7 +51,7 @@
 
     <style name="edit_texts">
         <item name="fontFamily">@font/josefin_sans</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
     <style name="textViews">
         <item name="fontFamily">@font/josefin_sans</item>

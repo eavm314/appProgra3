@@ -15,8 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="35dp"
         android:layout_marginStart="24dp"
-        android:text="Resumen del pedido"
-        android:textSize="24dp"
+        android:text="@string/resume_order"
+        android:textSize="24sp"
         />
 
     <TextView
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="12dp"
         android:layout_marginStart="24dp"
-        android:text="Nombre:"
+        android:text="@string/resume_name"
         />
 
     <TextView
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toEndOf="@id/name_resume"
         android:layout_marginTop="12dp"
         android:layout_marginStart="4dp"
-        android:text="En Blanco"
+        android:text="@string/resume_name_info"
         />
 
     <TextView
@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="12dp"
         android:layout_marginStart="24dp"
-        android:text="NIT:"
+        android:text="@string/resume_nit"
         />
 
     <TextView
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toEndOf="@id/nit_resume"
         android:layout_marginTop="12dp"
         android:layout_marginStart="4dp"
-        android:text="En Blanco"
+        android:text="@string/resume_nit_info"
         />
 
     <TextView
@@ -76,7 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="4dp"
-        android:text="30Bs"
+        android:text="@string/resume_money"
         />
 
     <TextView
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toStartOf="@id/paid_resume_value"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="4dp"
-        android:text="Total:"
+        android:text="@string/resume_total"
         />
 
 
@@ -103,7 +103,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="12dp"
         android:layout_marginStart="24dp"
-        android:text="Pizza:"
+        android:text="@string/resume_pizza"
         />
 
     <TextView
@@ -115,7 +115,7 @@
         app:layout_constraintStart_toEndOf="@id/order_resume_title"
         android:layout_marginTop="12dp"
         android:layout_marginStart="4dp"
-        android:text="Pizza"
+        android:text="@string/resume_info_pizza"
         />
 
 
@@ -132,21 +132,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/subtitles2"
+        style="@style/edit_texts"
         app:layout_constraintBottom_toTopOf="@id/confirm_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="4dp"
 
-        android:text="Presiona sobre tu ubicación para indicarnos a donde enviar tu pedido"
+        android:text="@string/resume_information"
         />
     <Button
         android:id="@+id/confirm_button"
         style="@style/buttons"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:text="Confirmar dirección"
+        android:text="@string/confirm_address"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="36dp"

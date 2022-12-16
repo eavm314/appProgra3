@@ -119,13 +119,15 @@
         app:layout_constraintBottom_toTopOf="@+id/total_price">
 
         <TextView
+            style="@style/textViews"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="@string/precio_parcial"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
+            style="@style/textViews"
             android:id="@+id/price_p"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
@@ -145,14 +147,16 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
+            style="@style/textViews"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="@string/precio_total"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/price_t"
+            style="@style/textViews"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="end"

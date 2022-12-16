@@ -17,13 +17,17 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         initUi()
+        setListeners()
+    }
+
+    private fun setListeners() {
         binding.btnGoToNewUser.setOnClickListener {
             val intent = Intent(this, NewUserActivity::class.java)
             startActivity(intent)
         }
     }
+
     private fun initUi(){
         auth = FirebaseAuth.getInstance()
         currentUser = auth.currentUser
@@ -39,7 +43,6 @@ class LoginActivity : AppCompatActivity() {
                         loginUser(email, pass)
                 }
             }
-
         }
     }
 
