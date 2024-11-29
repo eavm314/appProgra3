@@ -32,6 +32,11 @@ jobs:
         env:
           MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
         run: echo MAPS_API_KEY="$MAPS_API_KEY" > ./local.properties
+      
+      - name: Create Local Properties
+        env:
+          DATA: ${{ secrets.GOOGLE_SERVICES_FILE_CONTENT }}
+        run: echo $DATA > ./app/google-services.json
 
       - name: Execute Gradle command - assembleDebug
         run: ./gradlew assembleDebug
